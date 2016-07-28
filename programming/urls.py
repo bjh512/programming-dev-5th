@@ -16,8 +16,14 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from blog import views
+from pokemon import views as pokemon_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.post_list),
+    url(r'^sum2/(?P<x>[\d/]+)/$',views.mysum2),
+    url(r'^sum/(?P<x>\d+)/(?P<y>\d+)/(?P<z>\d+)/$', views.mysum),
+	url(r'^sum/(?P<x>\d+)/(?P<y>\d+)/$', views.mysum),
+	url(r'^sum/(?P<x>\d+)/$', views.mysum),
+    url(r'^pokemon/$', pokemon_views.pokemon_list),
 ]
