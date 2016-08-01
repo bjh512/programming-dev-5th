@@ -17,6 +17,7 @@ from django.conf.urls import url
 from django.contrib import admin
 from blog import views
 from pokemon import views as pokemon_views
+from post import views as post_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -26,4 +27,7 @@ urlpatterns = [
 	url(r'^sum/(?P<x>\d+)/(?P<y>\d+)/$', views.mysum),
 	url(r'^sum/(?P<x>\d+)/$', views.mysum),
     url(r'^pokemon/$', pokemon_views.pokemon_list),
+    url(r'^human/$', pokemon_views.human_list),
+    url(r'^catch/$', pokemon_views.catch_list),
+    url(r'^post/$',post_views.post_list)
 ]

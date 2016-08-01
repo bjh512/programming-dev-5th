@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'blog',
     'debug_toolbar',
     'pokemon',
+    'post',
 ]
 
 MIDDLEWARE_CLASSES = [

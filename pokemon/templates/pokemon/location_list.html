@@ -1,0 +1,16 @@
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+	<h1>웰컴 투 포켓몬 월드</h1>
+	<table>
+		{% for pokemon in pokemon_list %}
+		<tr>
+			<td>
+				{{ pokemon.name }}
+			</td>
+			{% endfor %}
+	</table>
+</body>
+</html>

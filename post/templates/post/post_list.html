@@ -1,0 +1,28 @@
+<style>
+    .row1{
+      color: red;
+    }
+</style>
+
+{% block p1 %}
+<table>
+  {% for num in post_list %}
+   <tr>
+      <td class="{% cycle 'row1' 'row2' %}">
+        {{ num.addr }} 
+      </td>
+   </tr>
+   {% endfor %}
+</table>
+{% endblock %}
+{% block p2 %}
+<table>
+  {% for addr in addr_list %}
+   <tr>
+      <td class="{% cycle 'row1' 'row2' %}">
+        {{ addr|default:"해당 우편번호와 일치하는 주소가 없습니다." }} 
+      </td>
+   </tr>
+   {% endfor %}
+</table>
+{% endblock %}
